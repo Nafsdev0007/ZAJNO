@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@font-face {
+  font-family: Avenir;
+  src: url(/public/fonts/sh.woff2);
+}
+
+* {
+  font-family: Avenir;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+.anim-link{
+  @apply after:content-[''] after:absolute after:w-full relative rounded-xs after:bottom-0 after:left-0 after:h-px after:bg-black overflow-hidden  after:scale-x-0 after:transition-transform duration-1000 hover:after:scale-100 after:origin-right hover:after:origin-left;
+}
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex: 0 0 auto;
+  width: auto;
+  background: transparent;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+img:not(.no_gray,.swiper-slide img) {
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in-out;
+}
+img:hover {
+  filter: grayscale(0);
+}
